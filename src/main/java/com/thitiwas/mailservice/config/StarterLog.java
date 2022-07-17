@@ -28,7 +28,8 @@ public class StarterLog {
         }
         String serverPort = env.getProperty("server.port");
         String contextPath = env.getProperty("server.servlet.context-path");
-        if (contextPath != null && !contextPath.equals("")) {
+
+        if (contextPath == null) {
             contextPath = "/";
         }
         String hostAddress = "localhost";
